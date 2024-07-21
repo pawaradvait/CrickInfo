@@ -1,0 +1,13 @@
+<div>
+    <h1 class="text-4xl text-blue-950 font-extrabold">Live Cricket Score</h1>
+    <div class="card-container items-stretch flex flex-wrap flex-col md:flex-row">
+        @for (match of liveMatches; track $index){
+            <div class="p-2 md:w-[25%] w-full">
+                <app-match-card [match]="match"></app-match-card>
+            </div>
+        }
+        @empty{
+            there is no match
+        }
+    </div>
+</div>

@@ -1,0 +1,30 @@
+    <h1 class="text-4xl pb-4 text-blue-950 font-extrabold">Point Table</h1>
+    <div class="bg-gradient-to-br from-teal-400 to-blue-500 rounded-lg overflow-hidden shadow-lg">
+    <table class="w-full table-auto text-center font-semibold">
+        <thead>
+            <tr>
+                @for (heading of tableHeading; track $index) {
+                    <th class="px-4 py-2 text-white border">{{heading}}</th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @for (team of pointTable; track $index) {
+                <tr class="hover:bg-opacity-75 hover:bg-white transition-all hover:scale-110 cursor-pointer"
+                    [ngClass]="{
+                        'bg-gradient-to-tl from-green-200 to-green-300': $index<=4,
+                        'bg-gradient-to-tr from-red-200 to-red-300' : $index>4
+                    }"
+                    
+                >
+                <!-- bg-gradient-to-br from-green-200 to-green-300 -->
+                    @if ($index>0) {
+                        @for (data of team; track $index) {
+                            <td class="px-4 py-2">{{data}}</td>
+                        }
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

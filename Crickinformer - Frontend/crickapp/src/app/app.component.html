@@ -1,0 +1,20 @@
+    <div class="bg-gradient-to-r from-blue-500 to-teal-500 text-white py-4">
+  <div class="container mx-auto flex justify-between items-center">
+    <div class="text-lg font-bold">
+      CrickInformer
+    </div>
+    <nav class="space-x-8 rounded-full">
+      <a [routerLink] = "'/home'" href="#" class="hover:text-zinc-300">Home</a>
+      <a [routerLink] = "'/live'" href="#" class="hover:text-zinc-300">Live Matches</a>
+      <a [routerLink] = "'/history'" href="#" class="hover:text-zinc-300">History</a>
+      <a [routerLink] = "'/point-table'" href="#" class="hover:text-zinc-300">Point Table</a>
+    </nav>
+    <div>
+      <a href="#" class="border border-white px-4 py-2 rounded-full hover:bg-white hover:text-blue-500 transition">Book Appointment</a>
+    </div>
+  </div>
+</div>
+<div class="px-28 py-4">
+  <router-outlet></router-outlet>
+
+</div>

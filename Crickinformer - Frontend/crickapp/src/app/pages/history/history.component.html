@@ -1,0 +1,14 @@
+<div>
+    <h1 class="text-4xl text-blue-950 font-extrabold">History</h1>
+    <div class="card-container items-stretch flex flex-wrap flex-col md:flex-row">
+        @for (match of allMatches; track $index){
+            <div class="p-2 md:w-[25%] w-full">
+                <app-match-card [match]="match"></app-match-card>
+            </div>
+        }
+        @empty{
+            There is no match available right now   
+        }
+    </div>
+</div>
+
